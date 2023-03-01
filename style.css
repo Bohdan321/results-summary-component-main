@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Hanken Grotesk";
-  src: url(../assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+  src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
   font-weight: 500 800;
 }
 :root {
@@ -117,7 +117,7 @@ section.skill-evaluation h3.skill-evaluation__name {
   flex: 1 1 auto;
 }
 section.skill-evaluation p.skill-evaluation__ratio-of-score {
-  color: hsla(224deg, 30%, 27%, 0.5);
+  color: hsla(224, 30%, 27%, 0.5);
   font-weight: 700;
   text-align: right;
 }
@@ -125,52 +125,28 @@ section.skill-evaluation span.skill-evaluation__score {
   color: var(--darkGrayBlue);
 }
 section.skill-evaluation.light-red {
-  background-color: hsla(0deg, 100%, 67%, 0.05);
+  background-color: hsla(0, 100%, 67%, 0.05);
 }
 section.skill-evaluation.light-red h3.skill-evaluation__name {
   color: var(--lightRed);
 }
 section.skill-evaluation.orange-yellow {
-  background-color: hsla(39deg, 100%, 56%, 0.05);
+  background-color: hsla(39, 100%, 56%, 0.05);
 }
 section.skill-evaluation.orange-yellow h3.skill-evaluation__name {
   color: var(--orangeYellow);
-  /* &::before {
-      content: "";
-      display: inline-block;
-      background: url(./assets/images/icon-memory.svg) no-repeat center/contain;
-      width: 3rem;
-      height: 24px;
-      vertical-align: bottom;
-  } */
 }
 section.skill-evaluation.green-teal {
-  background-color: hsla(166deg, 100%, 37%, 0.05);
+  background-color: hsla(166, 100%, 37%, 0.05);
 }
 section.skill-evaluation.green-teal h3.skill-evaluation__name {
   color: var(--greenTeal);
-  /* &::before {
-      content: "";
-      display: inline-block;
-      background: url(./assets/images/icon-verbal.svg) no-repeat center/contain;
-      width: 3rem;
-      height: 24px;
-      vertical-align: bottom;
-  } */
 }
 section.skill-evaluation.cobalt-blue {
-  background-color: hsla(234deg, 85%, 45%, 0.05);
+  background-color: hsla(234, 85%, 45%, 0.05);
 }
 section.skill-evaluation.cobalt-blue h3.skill-evaluation__name {
   color: var(--cobaltBlue);
-  /* &::before {
-      content: "";
-      display: inline-block;
-      background: url(./assets/images/icon-visual.svg) no-repeat center/contain;
-      width: 3rem;
-      height: 24px;
-      vertical-align: bottom;
-  } */
 }
 
 button.summary-container__button {
