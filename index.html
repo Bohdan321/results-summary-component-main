@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="wrapper">
+    <aside class="score-container">
+      <h2 class="score-container__header">Your Result</h2>
+      <div class="score-container__score-item">
+        <h1 class="score-container__average-score">76</h1>
+        <p>of 100</p>
+      </div>
+      <h2 class="score-container__evaluation-word">Great</h2>
+      <p>  You scored higher than 65% of the people who have taken these tests.</p>
+    </aside>
+  
+    <main class="summary-container" id="summaryContainer">
+      <h2 class="summary-container__header">Summary</h2>
+  
+      <!-- ! Commented items that are built using JS according to the information contained in the file data.json -->
+      <!-- <section class="skill-evaluation light-red">
+        <img src="./assets/images/icon-reaction.svg">
+        <h3 class="skill-evaluation__name">Reaction</h3>
+        <p class="skill-evaluation__ratio-of-score"><span class="skill-evaluation__score">80</span> / 100</p>
+      </section>
+      <section class="skill-evaluation orange-yellow">
+        <img src="./assets/images/icon-memory.svg">
+        <h3 class="skill-evaluation__name">Memory</h3>
+        <p class="skill-evaluation__ratio-of-score"><span class="skill-evaluation__score">92</span> / 100</p>
+      </section>
+      <section class="skill-evaluation green-teal">
+        <img src="./assets/images/icon-verbal.svg">
+        <h3 class="skill-evaluation__name">Verbal</h3>
+        <p class="skill-evaluation__ratio-of-score"><span class="skill-evaluation__score">61</span> / 100</p>
+      </section>
+      <section class="skill-evaluation cobalt-blue">
+        <img src="./assets/images/icon-visual.svg">
+        <h3 class="skill-evaluation__name">Visual</h3>
+        <p class="skill-evaluation__ratio-of-score"><span class="skill-evaluation__score">72</span> / 100</p>
+      </section> -->
+      <button class="summary-container__button" id="buttonContinue">Continue</button>
+    </main>
+</div >
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

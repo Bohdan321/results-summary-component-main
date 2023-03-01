@@ -1,0 +1,169 @@
+@use "./style-scss/_index.scss" as *;
+
+* {
+    font-family: "Hanken Grotesk";
+    font-size: $myFontSize;
+}
+.wrapper {
+}
+aside.score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $gradientBackgroundBlue;
+    border-end-end-radius: 2rem;
+    border-end-start-radius: 2rem;
+    color: $neutLightLavender;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    .score-container__evaluation-word {
+        font-size: 1.2rem;
+        color: $neutWhite;
+        font-weight: 700;
+    }
+    > p {
+        margin: 0 1rem 0 1rem;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+}
+.score-container__score-item {
+    background: $gradientCircleBlue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    > p {
+        opacity: 0.7;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+    .score-container__average-score {
+        font-size: calc(2.8 * $myFontSize);
+        color: $neutWhite;
+    }
+}
+main.summary-container {
+    margin: 1.5rem;
+    display: grid;
+    gap: 1rem;
+    .summary-container__header {
+        color: $neutDarkGrayBlue;
+        margin-bottom: 0.5rem;
+        font-weight: 800;
+    }
+}
+section.skill-evaluation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    height: calc(3 * $myFontSize);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    > img {
+        padding: 0.5rem;
+    }
+    h3.skill-evaluation__name {
+        text-align: left;
+        flex: 1 1 auto;
+    }
+    p.skill-evaluation__ratio-of-score {
+        color: hsla(224, 30%, 27%, 50%);
+        font-weight: 700;
+        text-align: right;
+    }
+    span.skill-evaluation__score {
+        color: $neutDarkGrayBlue;
+    }
+    &.light-red {
+        background-color: hsla(0, 100%, 67%, 5%);
+        h3.skill-evaluation__name {
+            color: $primeLightRed;
+        }
+    }
+    &.orange-yellow {
+        background-color: hsla(39, 100%, 56%, 5%);
+        h3.skill-evaluation__name {
+            color: $primeOrangeYellow;
+        }
+    }
+    &.green-teal {
+        background-color: hsla(166, 100%, 37%, 5%);
+        h3.skill-evaluation__name {
+            color: $primeGreenTeal;
+        }
+    }
+    &.cobalt-blue {
+        background-color: hsla(234, 85%, 45%, 5%);
+        h3.skill-evaluation__name {
+            color: $primeCobaltBlue;
+        }
+    }
+}
+button.summary-container__button {
+    background-color: $neutDarkGrayBlue;
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem;
+    color: $neutWhite;
+    font-weight: 700;
+    &:hover,
+    &:focus {
+        background: $gradientBackgroundBlue;
+        outline: none;
+        cursor: pointer;
+    }
+}
+@media only screen and (min-width: 750px) {
+    * {
+        font-size: calc(1.2 * $myFontSize);
+    }
+    body {
+        background-color: $neutWhite;
+    }
+    .wrapper {
+        margin: 5rem auto 3rem auto;
+        max-width: 900px;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0rem 1rem 2rem 2rem $neutPaleBlue;
+        aside {
+            border-radius: 2rem;
+            flex: 50%;
+            justify-content: space-evenly;
+            background: linear-gradient(180deg, var(--LightSlateBlue) -38.3%, var(--LightRoyalBlue) 100%);
+            h2.score-container__header {
+                font-size: 1.2em;
+            }
+            div.score-container__score-item {
+                width: 10rem;
+                height: 10rem;
+                .score-container__average-score {
+                    font-size: calc(4 * $myFontSize);
+                    color: $neutWhite;
+                }
+            }
+            h2.score-container__evaluation-word {
+                font-size: 1.7em;
+            }
+        }
+        main {
+            flex: 50%;
+            padding: 1rem;
+            .summary-container__header {
+                font-size: 1.3em;
+            }
+            section.skill-evaluation {
+                margin-bottom: 0;
+                height: calc(3.5 * $myFontSize);
+            }
+        }
+    }
+}

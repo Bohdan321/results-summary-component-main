@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(../assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+  font-weight: 500 800;
+}
+:root {
+  /* Screen widths */
+  --mobile: 375px;
+  --desktop: 1440px;
+  /* COLORS */
+  /* Primary colors */
+  --lightRed: hsl(0, 100%, 67%);
+  --orangeYellow: hsl(39, 100%, 56%);
+  --greenTeal: hsl(166, 100%, 37%);
+  --cobaltBlue: hsl(234, 85%, 45%);
+  /* Gradients */
+  /* gradientBackgroundBlue: */
+  --LightSlateBlue: hsl(252, 100%, 67%);
+  --LightRoyalBlue: hsl(241, 81%, 54%);
+  /* gradientCircleBlue */
+  --VioletBlue: hsla(256, 72%, 46%, 1);
+  --PersianBlue: hsla(241, 72%, 46%, 0);
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --paleBlue: hsl(221, 100%, 96%);
+  --lightLavender: hsl(241, 100%, 89%);
+  --darkGrayBlue: hsl(224, 30%, 27%);
+  /* font-size */
+  --myFontSize: 18px;
+}
+
+/* COLORS */
+/* Primary colors */
+/* Gradients */
+/* Neutral */
+/* font size  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Hanken Grotesk";
+  font-size: var(--myFontSize);
+}
+
+aside.score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, var(--LightSlateBlue) 0%, var(--LightRoyalBlue) 100%);
+  border-end-end-radius: 2rem;
+  border-end-start-radius: 2rem;
+  color: var(--lightLavender);
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+aside.score-container .score-container__evaluation-word {
+  font-size: 1.2rem;
+  color: var(--white);
+  font-weight: 700;
+}
+aside.score-container > p {
+  margin: 0 1rem 0 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.score-container__score-item {
+  background: linear-gradient(180deg, var(--VioletBlue) 0%, var(--PersianBlue) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+}
+.score-container__score-item > p {
+  opacity: 0.7;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.score-container__score-item .score-container__average-score {
+  font-size: calc(2.8 * var(--myFontSize));
+  color: var(--white);
+}
+
+main.summary-container {
+  margin: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+main.summary-container .summary-container__header {
+  color: var(--darkGrayBlue);
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+
+section.skill-evaluation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  height: calc(3 * var(--myFontSize));
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+section.skill-evaluation > img {
+  padding: 0.5rem;
+}
+section.skill-evaluation h3.skill-evaluation__name {
+  text-align: left;
+  flex: 1 1 auto;
+}
+section.skill-evaluation p.skill-evaluation__ratio-of-score {
+  color: hsla(224deg, 30%, 27%, 0.5);
+  font-weight: 700;
+  text-align: right;
+}
+section.skill-evaluation span.skill-evaluation__score {
+  color: var(--darkGrayBlue);
+}
+section.skill-evaluation.light-red {
+  background-color: hsla(0deg, 100%, 67%, 0.05);
+}
+section.skill-evaluation.light-red h3.skill-evaluation__name {
+  color: var(--lightRed);
+}
+section.skill-evaluation.orange-yellow {
+  background-color: hsla(39deg, 100%, 56%, 0.05);
+}
+section.skill-evaluation.orange-yellow h3.skill-evaluation__name {
+  color: var(--orangeYellow);
+  /* &::before {
+      content: "";
+      display: inline-block;
+      background: url(./assets/images/icon-memory.svg) no-repeat center/contain;
+      width: 3rem;
+      height: 24px;
+      vertical-align: bottom;
+  } */
+}
+section.skill-evaluation.green-teal {
+  background-color: hsla(166deg, 100%, 37%, 0.05);
+}
+section.skill-evaluation.green-teal h3.skill-evaluation__name {
+  color: var(--greenTeal);
+  /* &::before {
+      content: "";
+      display: inline-block;
+      background: url(./assets/images/icon-verbal.svg) no-repeat center/contain;
+      width: 3rem;
+      height: 24px;
+      vertical-align: bottom;
+  } */
+}
+section.skill-evaluation.cobalt-blue {
+  background-color: hsla(234deg, 85%, 45%, 0.05);
+}
+section.skill-evaluation.cobalt-blue h3.skill-evaluation__name {
+  color: var(--cobaltBlue);
+  /* &::before {
+      content: "";
+      display: inline-block;
+      background: url(./assets/images/icon-visual.svg) no-repeat center/contain;
+      width: 3rem;
+      height: 24px;
+      vertical-align: bottom;
+  } */
+}
+
+button.summary-container__button {
+  background-color: var(--darkGrayBlue);
+  border: none;
+  border-radius: 3rem;
+  padding: 1rem;
+  color: var(--white);
+  font-weight: 700;
+}
+button.summary-container__button:hover, button.summary-container__button:focus {
+  background: linear-gradient(180deg, var(--LightSlateBlue) 0%, var(--LightRoyalBlue) 100%);
+  outline: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 750px) {
+  * {
+    font-size: calc(1.2 * var(--myFontSize));
+  }
+  body {
+    background-color: var(--white);
+  }
+  .wrapper {
+    margin: 5rem auto 3rem auto;
+    max-width: 900px;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0rem 1rem 2rem 2rem var(--paleBlue);
+  }
+  .wrapper aside {
+    border-radius: 2rem;
+    flex: 50%;
+    justify-content: space-evenly;
+    background: linear-gradient(180deg, var(--LightSlateBlue) -38.3%, var(--LightRoyalBlue) 100%);
+  }
+  .wrapper aside h2.score-container__header {
+    font-size: 1.2em;
+  }
+  .wrapper aside div.score-container__score-item {
+    width: 10rem;
+    height: 10rem;
+  }
+  .wrapper aside div.score-container__score-item .score-container__average-score {
+    font-size: calc(4 * var(--myFontSize));
+    color: var(--white);
+  }
+  .wrapper aside h2.score-container__evaluation-word {
+    font-size: 1.7em;
+  }
+  .wrapper main {
+    flex: 50%;
+    padding: 1rem;
+  }
+  .wrapper main .summary-container__header {
+    font-size: 1.3em;
+  }
+  .wrapper main section.skill-evaluation {
+    margin-bottom: 0;
+    height: calc(3.5 * var(--myFontSize));
+  }
+}/*# sourceMappingURL=style.css.map */
