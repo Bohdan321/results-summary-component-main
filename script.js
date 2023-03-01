@@ -15,6 +15,7 @@ function createEvaluationScoreFromDataJSON(data) {
 
         let skillIcon = document.createElement("img");
         skillIcon.src = data[i].icon;
+        skillIcon.setAttribute("alt",`icon-${data[i].category}`);
         newSkillDiv.append(skillIcon);
 
         let skillName = document.createElement("h3");
